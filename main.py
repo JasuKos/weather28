@@ -5,6 +5,7 @@ import machine
 machine.freq(240000000)
 del machine
 gc.collect()
+print("Muistia alussa: "+str(gc.mem_free()))
 
 import time
 from machine import Pin, SPI, PWM
