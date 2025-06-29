@@ -165,7 +165,7 @@ def updatescr():
     display.fill_rectangle(0,160,239,159,0)
     display.draw_text(ulkopaikka, 160, ulko, acumin, lagoon)
     x=10
-    y=270+int(float(min(temperatures)))
+    y=268+int(float(min(temperatures)))
     t=0
     xg=10
     maxtemp=0
