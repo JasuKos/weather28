@@ -181,9 +181,9 @@ def updatescr():
     while xg < 230:
         display.draw_line(xg,310,xg,210,scale)
         if asteikko > 9:
-            display.draw_text8x8(xg-7, 310, str(asteikko), lightgray)
+            display.draw_text8x8(xg-7, 308, str(asteikko), lightgray)
         else:
-            display.draw_text8x8(xg-3, 310, str(asteikko), lightgray)
+            display.draw_text8x8(xg-3, 308, str(asteikko), lightgray)
         asteikko = asteikko + 6
         if asteikko > 23:
             asteikko = asteikko - 24
