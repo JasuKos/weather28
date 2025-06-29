@@ -140,10 +140,10 @@ def updatescr():
         pwm.init(freq=200, duty=512) # 0-1023 päivä #255
     else:
         pwm.init(freq=200, duty=29) # 0-1023 yö #24
-    pvmpaikka = int((240-acumin.measure_text(pvm))/2)
-    klopaikka = int((240-acumin.measure_text(klo))/2)
+    pvmpaikka = int((239-acumin.measure_text(pvm))/2)
+    klopaikka = int((239-acumin.measure_text(klo))/2)
     ulko = str(temperatures[0])+"="
-    ulkopaikka = int((240-acumin.measure_text(str(temperatures[0])+"="))/2)
+    ulkopaikka = int((239-acumin.measure_text(str(temperatures[0])+"="))/2)
     # Display 5,59,113,167,221,275
     # Colors
     black = color565(0, 0, 0)
@@ -159,7 +159,7 @@ def updatescr():
     #display.clear(black)
     print("yläpeitto")
     display.fill_rectangle(0,0,239,100,0)
-    display.draw_text8x8((240 - len(viikonpaiva) * 8) // 2, 2, viikonpaiva, lightgray)
+    display.draw_text8x8((239 - len(viikonpaiva) * 8) // 2, 2, viikonpaiva, lightgray)
     display.draw_text(pvmpaikka, 17, pvm, acumin, lightgray)
     display.draw_text(klopaikka, 60, klo, acumin, lightgray)
     display.fill_rectangle(0,160,239,159,0)
