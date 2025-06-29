@@ -5,7 +5,6 @@ import machine
 machine.freq(240000000)
 del machine
 gc.collect()
-print("Muistia alussa: "+str(gc.mem_free()))
 
 import time
 from machine import Pin, SPI, PWM
@@ -31,7 +30,6 @@ display = Display(spi, dc=Pin(2), cs=Pin(15), rst=Pin(12))
 def weather():
     import urequests2 as urequests
     gc.collect()
-    print("Muistia vapaana: "+str(gc.mem_free()))
     temps = urequests.request('GET', config.REQUESTURL)
     del urequests
     gc.collect()
@@ -135,7 +133,6 @@ def localclock():
     
 def updatescr():
     global tu
-    print(tu)
     if 7 <= tu <= 22:
         pwm.init(freq=200, duty=512) # 0-1023 päivä #255
     else:
